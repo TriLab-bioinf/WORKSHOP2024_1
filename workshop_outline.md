@@ -1,5 +1,12 @@
 # Introduction to Linux and the Linux terminal
 
+*What is "the Shell"?*
+
+Simply put, the shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but 
+
+*What's a "Terminal?"*
+It's a program that opens a window and lets you interact with the shell. 
+
 ## a.	How to open a terminal in Windows and MacOSX
 
 *MacOSX:*
