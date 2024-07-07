@@ -35,7 +35,7 @@ Try the following Linux command to print out the content of the current director
 ```
 ls
 ```
-The behaviour of Linux command can be modified by adding one or more parameters to the command. For example, try the following variations of the "ls" command
+The behaviour of Linux commands can be modified by adding one or more parameters to the command. Parameters are usually defined by the "-" symbol followed by a letter (e.g. -h) or "--" followed by a word (e.g. --help). For example, try the following variations of the "ls" command
 ```
 ls -l
 ls -a
