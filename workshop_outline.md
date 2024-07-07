@@ -6,7 +6,7 @@ First, some definitions:
 
 A shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but 
 
-*What's a Terminal?*
+*What is a Terminal?*
 
 It's a program that opens a window and lets you interact with the shell. 
 
