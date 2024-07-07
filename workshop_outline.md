@@ -29,7 +29,7 @@ cd /data/$USER/
 git clone https://github.com/TriLab-bioinf/WORKSHOP2024_1.git
 ```
 
-## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd) and create a folder (mkdir) or find out what is the current working directory (pwd).
+## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd), create a folder (mkdir) or find out what is the current working directory (pwd).
 
 ```
 >ls
