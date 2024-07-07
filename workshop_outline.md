@@ -31,15 +31,19 @@ git clone https://github.com/TriLab-bioinf/WORKSHOP2024_1.git
 
 ## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd), create a folder (mkdir) or find out what is the current working directory (pwd).
 
+Try the following Linux command to print out the content of the current directory
 ```
->ls
->ls -l
->ls -a
->ls -l -t
->ls -l -r -t
->ls -lrt
->ls -lrth
-
+ls
+```
+The behaviour of Linux command can be modified by adding one or more parameters to the command. For example, try the following variations of the "ls" command
+```
+ls -l
+ls -a
+ls -l -t
+ls -l -r -t
+ls -lrt
+ls -lrth
+```
 
 b.	File permissions, how to change permissions (chmod).
 
