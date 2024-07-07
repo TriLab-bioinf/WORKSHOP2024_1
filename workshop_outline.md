@@ -2,13 +2,17 @@
 
 First, some definitions:
 
+*What is Linux?*
+
+Linux is a free and open-source operating system (OS) that manages a computer's hardware and resources, like memory, storage, and CPU. It's similar to other operating systems like Windows, macOS, and iOS.
+
 *What is a Shell?*
 
-A shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but 
+A shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common Linux shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but 
 
 *What is a Terminal?*
 
-It's a program that opens a window and lets you interact with the shell. 
+A Terminal is a program that opens a window and lets you interact with the shell. 
 
 ## a.	How to open a terminal in Windows and MacOSX
 
