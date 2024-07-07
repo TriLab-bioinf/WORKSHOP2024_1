@@ -1,23 +1,32 @@
-**The use of the Linux terminal. Potential date 07/12/2024 at 12pm – 2pm**
+# Introduction to Linux and the Linux terminal
 
-Topics to teach (not in order):
+## a.	How to open a terminal in Windows and MacOSX
 
-a.	How to open a terminal in Windows and OSX
-    OSX:
-    In Finder, go to Applications > Utilities > Terminal.app
+*MacOSX:*
+In Finder, go to Applications > Utilities > Terminal.app
+
 ```
 ssh $USER@biowulf.nih.gov
 ```
 
-    WINDOWS:
+*WINDOWS:*
+XXXXXXXXXXXXXXXXXXXX
+
+In the terminal, type the following command to login into Biowulf:
 ```
 ssh $USER@biowulf.nih.gov
 ```
 
-Once in biowulf, run the following command to login into an interactive server within biowulf:
+Once in biowulf, run the following command to login into an interactive server:
 ```
 sinteractive
-```    
+```
+
+Run the following commands in the interactive server:
+```
+cd /data/$USER/
+git 
+```
 
 b.	File permissions, how to change permissions (chmod).
 
