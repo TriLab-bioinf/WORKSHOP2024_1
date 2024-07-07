@@ -12,6 +12,7 @@ ssh $USER@biowulf.nih.gov
 *WINDOWS:*
 XXXXXXXXXXXXXXXXXXXX
 
+## b. Login into Biowulf and download the workshop's guide
 In the terminal, type the following command to login into Biowulf:
 ```
 ssh $USER@biowulf.nih.gov
@@ -27,6 +28,18 @@ Run the following commands in the interactive server:
 cd /data/$USER/
 git clone https://github.com/TriLab-bioinf/WORKSHOP2024_1.git
 ```
+
+## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd) and create a folder (mkdir) or find out what is the current working directory (pwd).
+
+```
+>ls
+>ls -l
+>ls -a
+>ls -l -t
+>ls -l -r -t
+>ls -lrt
+>ls -lrth
+
 
 b.	File permissions, how to change permissions (chmod).
 
