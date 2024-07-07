@@ -25,7 +25,7 @@ sinteractive
 Run the following commands in the interactive server:
 ```
 cd /data/$USER/
-git clone git@github.com:TriLab-bioinf/WORKSHOP2024_1.git
+git clone https://github.com/TriLab-bioinf/WORKSHOP2024_1.git
 ```
 
 b.	File permissions, how to change permissions (chmod).
