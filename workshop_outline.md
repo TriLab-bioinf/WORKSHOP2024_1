@@ -256,6 +256,7 @@ When you create an account in Biowulf, you are assigned two working directories.
 checkquota
 ```
 The output should look similar to this:
+```
 Mount                        Used      Quota  Percent    Files    Limit  Percent
 /data:                     2.8 TB     4.2 TB   66.97%  1058503 32000000    3.31%
 /data(Hintonlab):          1.7 TB     2.0 TB   84.80%    46486 32000000    0.15%
