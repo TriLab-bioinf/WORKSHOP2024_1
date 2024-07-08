@@ -25,6 +25,22 @@ Linux directories are organized as a tree, where the root of the tree is named "
 
 So the full path to the directory "share" from Fig. 1 above would be: "/usr/share/" which actually represents the path from root -> usr -> share.
 
+*What is a Linux variable*
+
+A Linux variable is a character string that can holds numeric or character values (e.g. 'Hello', 12, 'Hello World'). They are defined with an '=' sign like this:
+```
+I_am_a_variable=12
+VARIABLE2='Hello World'
+VAriablE3=/I/am/a/single/string
+
+```
+To use the value stored in a value you call the variable with the prefix '$'; For instance:
+```
+# The command below prints out 'Hello World'
+echo $VARIABLE2
+
+```
+
 ## a.	How to open a terminal in Windows and MacOSX
 
 *MacOSX:*
@@ -171,7 +187,7 @@ Delete or remove my_new_file (WARNING: be careful because is is not possible to 
 rm my_new_file
 ```
 
-**g. Redirecting the output of a command with ">" and ">>"**
+**g. Redirecting the output of a command to a file with ">" and ">>"**
 We can save the output of a command into a file with the special character ">" like this:
 ```
 ls / > my_output_file
