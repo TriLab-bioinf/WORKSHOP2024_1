@@ -135,7 +135,7 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
-**d. How to create a text file with the "nano" editor**
+## d. How to create a text file with the "nano" editor
 Go to the ~/folder_1 directory and run the following command:
 ```
 nano my_first_file.txt
@@ -151,7 +151,7 @@ Bye
 ```
 Save the file by typing ctrl-o and exit the file with ctrl-x
 
-## e. Visualize the content of text files with "more", "less" or "cat"**
+## e. Visualize the content of text files with "more", "less" or "cat"
 ```
 # Using more
 more my_first_file.txt
@@ -163,7 +163,7 @@ less my_first_file.txt
 cat my_first_file.txt
 ```
 
-## f. Copy a file (cp), rename/move a file (mv) or delete or remove a file (rm)**
+## f. Copy a file (cp), rename/move a file (mv) or delete or remove a file (rm)
 Let's copy "my_first_file.txt" to another file called "my_second_file.txt"
 ```
 cp my_first_file.txt my_second_file.txt
@@ -177,7 +177,7 @@ Delete or remove my_new_file (WARNING: be careful because is is not possible to 
 rm my_new_file
 ```
 
-## g. Redirecting the output of a command to a file with ">" and ">>"**
+## g. Redirecting the output of a command to a file with ">" and ">>"
 We can save the output of a command into a file with the special character ">" like this:
 ```
 ls / > my_output_file
@@ -193,7 +193,7 @@ cat my_first_file.txt >> my_output_file
 cat my_output_file
 ```
 
-## h. Local and environmental variables**
+## h. Local and environmental variables
 
 *What is a Linux variable*
 
@@ -228,7 +228,7 @@ env
 
 printenv
 ```
-## i. Starting an interactive session in Biowulf**
+## i. Starting an interactive session in Biowulf
 When you login into Biowulf, you are actually loging in into a special login computer or "node" named "biowulf.nih.gov" that has a small amount of memory and CPUs and therefore, it cannot run any programs. In fact, NIH doesn't allow you to run any processes in the login node. 
 
 To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the "sinteractive" command:
@@ -263,7 +263,7 @@ Mount                        Used      Quota  Percent    Files    Limit  Percent
 ```
 The "/home:" corresponds to your /home/$USER/ directory and the "/data:" correspsponds to your /data/$USER/ directory. If you look at the "Quota" column (actual amount of disk space available) you will see that your /data/$USER/ folder has way more space available than your home directory. The idea for this is that you should always work on your /data/$USER/ directory. Your home directory is reserved for saving configuration files for customizing your system (e.g. how the Terminal looks like, customizing the values of some useful environmental variables or Linux commands, etc.). 
 
-## j. Downloading the WORKSHOP2024_1 guide from the GitHub website into your /data/ directory**
+## j. Downloading the WORKSHOP2024_1 guide from the GitHub website into your /data/ directory
 
 Run the following commands in the interactive server:
 ```
