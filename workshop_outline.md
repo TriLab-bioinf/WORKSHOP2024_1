@@ -338,6 +338,7 @@ j.	How to redirect the output of a command to a file (“>”).
 k.	How to find help for linux commands (man) and scripts/programs (-h --help -help).
 
 l.	How to execute a linux command (importance of upper/lowercase distinction, parameters). 
+
         Example “command --my_parameter -m --MY_PARAM value -M value file”
         
 m.	File name extensions (.sh .py .pl .r)
@@ -355,22 +356,41 @@ r.	How to retrieve a file from the web (wget, curl).
 s.	How to create customized linux commands (alias)
 
 t.	How to define a variable
+
 u.	How to define an environmental variable (export).
+
 v.	How to stablish a secure connection to a server (ssh).
+
 w.	How to concatenate linux commands (“|”).
+
 x.	How to search specific text in a group of files (grep).
+
 y.	How to replace a text in a text file (sed).
+
 z.	How to sort a file base on a specified field or column (sort).
+
 aa.	How to count characters, words or lines in a text file (wc).
+
 bb.	How to count number of instances of keys/words in a file (uniq -c).
+
 cc. How to find out what program we are using (which).
+
 dd. What directories is Linux looking for commands/programs? The PATH environmental variable.
+
 ee. How to use programs installed in Biowulf?
+
 ff. Use of conda for installing software?
+
 gg. Redirecting the error output to a file 
+
 hh. Writing a Linux script
+
 ii. Running a Linux batch script in biowulf using sbatch or swarm
+
 jj. Current directory and previous directory (".", "..").
+
 kk. Find files/directories and execute commands on them (find). 
+
 ll. Loops wit for; do; done
+
 mm. Conditionals with if; then; fi 
