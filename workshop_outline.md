@@ -30,24 +30,77 @@ So the full path to the directory "share" from Fig. 1 above would be: "/usr/shar
 *MacOSX:*
 In Finder, go to Applications > Utilities > Terminal.app
 
-```
-ssh $USER@biowulf.nih.gov
-```
-
 *WINDOWS:*
 XXXXXXXXXXXXXXXXXXXX 
 **(Yuejun, could you please add the steps to open a Terminal in Windows and login into Biowulf? )**
 
 ## b. Login into Biowulf and download the workshop's guide
-In the terminal, type the following command to login into Biowulf:
+
+Biowulf is a cluster of High Performance Computing workstations. 
+In the terminal, type the following command to login into Biowulf. 
 ```
 ssh $USER@biowulf.nih.gov
 ```
+Type your NIH password and press "return".
 
-Once in biowulf, run the following command to login into an interactive server:
+Once in Biowulf, run the "echo" Linux command to print out a message into the terminal (Lines starting with the "#' symbol are comments and therefore, they will be ignored by the shell):
 ```
+# Print Hello World!
+echo Hello World!
+```
+
+Now type the same command but using all upper cases:
+```
+# Print Hello World!
+ECHO Hello World!
+```
+What happened with the command above?
+
+## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd), create a folder (mkdir) or find out what is the current working directory (pwd).
+
+Find out the name of your current working directory with the command "pwd" (print working directory) like so:
+```
+pwd
+```
+Let's find out the content of your current directory with the "ls" command:
+```
+ls
+```
+
+Let's find out the content of the root directory "/":
+```
+# ls + <SPACE> + /
+ls /
+```
+The behaviour of Linux commands can be modified by adding one or more parameters to the command. Parameters are usually defined by the "-" symbol followed by a letter (e.g. -h) or "--" followed by a word (e.g. --help). For example, try the following variations of the "ls" command to display the content of the /usr/ firectory:
+
+```
+ls -l /usr/
+ls -a /usr/
+ls -l -t /usr/
+ls -l -r -t /usr/
+ls -lrt /usr/
+ls -lrth /usr/
+```
+Can you see any differences?
+
+
+When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
+```
+hostname
+```
+
+To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the following command:
+```
+# Start an interactive session within Biowulf
 sinteractive
+
+# Find out the name of the interactive node 
+hostname
 ```
+
+Go to 
+
 
 Run the following commands in the interactive server:
 ```
