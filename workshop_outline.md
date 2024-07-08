@@ -291,13 +291,11 @@ ls -lrth
 
 b.	File permissions, how to change permissions (chmod).
 
-
 c.	How to see the content of a text file (more, less, vim, gvim?, others?)
 
 d.	How to see the first lines (head) or last lines (tail) of a file
 
 e.	How to see the content of a directory, navigate along a directory tree and create a folder (ls, ls -l, cd, mkdir) or find out the current working directory (pwd).
-
 
 ```
 >ls
@@ -391,6 +389,6 @@ jj. Current directory and previous directory (".", "..").
 
 kk. Find files/directories and execute commands on them (find). 
 
-ll. Loops wit for; do; done
+ll. Loops with for; do; done
 
 mm. Conditionals with if; then; fi 
