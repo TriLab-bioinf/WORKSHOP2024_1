@@ -171,6 +171,22 @@ Delete or remove my_new_file (WARNING: be careful because is is not possible to 
 rm my_new_file
 ```
 
+**g. Redirecting the output of a command with ">" and ">>"**
+We can save the output of a command into a file with the special character ">" like this:
+```
+ls / > my_output_file
+
+# Print out the content of my_output_file
+cat my_output_file
+```
+You can also append the output of a command to another file with the ">>" command like so:
+```
+cat my_first_file.txt >> my_output_file
+
+# Print out the content of my_output_file
+cat my_output_file
+```
+
 When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
 ```
 hostname
