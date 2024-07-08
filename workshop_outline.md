@@ -14,6 +14,17 @@ A shell is a program that takes commands from the keyboard and gives them to the
 
 A Terminal is a program that opens a window and lets you interact with the shell. 
 
+*Linux directory structure*
+
+Linux directories are organized as a tree, where the root of the tree is named "/". Most branches of the tree require special permissions for you to be able to read their contents, to modify/create/delete a file or to execute a script or command stored in them. By default, you are assigned a working directory named "/home/$USER", where $USER represents your NIH user name. Within your home directory, you have all the permissions required to create, modify or execute any file or program that is stored in it. 
+
+
+![](https://linuxhandbook.com/content/images/2020/06/linux-directory-structure.png)
+
+*Figure 1. Reference: [The Linux Handbook](https://linuxhandbook.com/linux-directory-structure/)*
+
+So the full path to the directory "share" from Fig. 1 above would be: "/usr/share/" which actually represents the path from root -> usr -> share.
+
 ## a.	How to open a terminal in Windows and MacOSX
 
 *MacOSX:*
@@ -24,7 +35,8 @@ ssh $USER@biowulf.nih.gov
 ```
 
 *WINDOWS:*
-XXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXX 
+**(Yuejun, could you please add the steps to open a Terminal in Windows and login into Biowulf? )**
 
 ## b. Login into Biowulf and download the workshop's guide
 In the terminal, type the following command to login into Biowulf:
