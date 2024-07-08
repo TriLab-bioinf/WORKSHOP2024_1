@@ -42,7 +42,23 @@ echo $VARIABLE2
 # The command below prints out '/I/am/a/single/string'
 echo $VAriablE2
 ```
-**Note in the example above that Linux considers upper and lower cases as completely different characters and therefore, the variable $VARIABLE2 is different than $VAriablE2**
+
+*What is a Linux Environmental variable*
+
+Environmental variables are special cases of the regular variables as defined above, whose values are still viewable (usable) by child processes run from the same terminal. In general, environmental variables hold values that are dynamicaly used by the Operating System. For instance, $USER holds your NIH user name and $SHELL holds the name of the default Linux shell used by your system (e.g. bash).
+
+Environmental variables can be defined with the "export" command this way:
+```
+export ENV_VARIABLE_1='Hello World'
+```
+You can see all the environmental variables present in your system with the command "env" or "printenv":
+```
+env
+
+printenv
+```
+
+**Note in the example above that Linux sees upper and lower cases as completely different characters and therefore, variable $VARIABLE2 is a different variable than $VAriablE2**
 
 ## a.	How to open a terminal in Windows and MacOSX
 
