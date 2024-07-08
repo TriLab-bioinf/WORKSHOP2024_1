@@ -350,7 +350,6 @@ Let's assume that we want to extract all the fasta headers of short_seq.fasta an
 grep ">" short_seq.fasta > fasta_headers
 
 # See the content of fatsa_headers with "cat", "more" or "less"
-```
 cat fasta_headers
 ```
 How you can find out how many headers are in the fasta_headers file?
