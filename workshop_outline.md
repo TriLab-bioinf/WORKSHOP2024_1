@@ -31,8 +31,7 @@ So the full path to the directory "share" from Fig. 1 above would be: "/usr/shar
 In Finder, go to Applications > Utilities > Terminal.app
 
 *WINDOWS:*
-XXXXXXXXXXXXXXXXXXXX 
-**(Yuejun, could you please add the steps to open a Terminal in Windows and login into Biowulf? )**
+Open Windows PowerShell
 
 ## b. Login into Biowulf and download the workshop's guide
 
@@ -93,7 +92,7 @@ Can you see any differences?
 
 You can jump to another directory within the file system with the "cd" (change dir) command like so:
 ```
-ch /usr
+cd /usr
 ```
 
 You can go back to your previous directory with the "-" parameter of the "cd" comand:
@@ -150,7 +149,7 @@ This is my first file
 Hello World!
 Bye
 ```
-Save the file by typing ctrl-o and exit the file woth ctrl-x
+Save the file by typing ctrl-o and exit the file with ctrl-x
 
 **e. Visualize the content of text files with "more", "less" or "cat"**
 ```
