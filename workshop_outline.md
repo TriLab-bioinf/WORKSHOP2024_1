@@ -251,8 +251,17 @@ echo $ENV_VARIABLE_1
 ```
 What happened with the values of *$I_am_a_variable* and *$ENV_VARIABLE_1*?
 
+When you create an account in Biowulf, you are assigned two working directories. Run the command "checkquota" in your Terminal to get info about all the working directories you have access to:
+```
+checkquota
+```
+The output should look similar to this:
+Mount                        Used      Quota  Percent    Files    Limit  Percent
+/data:                     2.8 TB     4.2 TB   66.97%  1058503 32000000    3.31%
+/data(Hintonlab):          1.7 TB     2.0 TB   84.80%    46486 32000000    0.15%
+/home:                     3.7 GB    16.0 GB   23.06%    38457      n/a    0.00%
+```
 
-Go to 
 
 
 Run the following commands in the interactive server:
