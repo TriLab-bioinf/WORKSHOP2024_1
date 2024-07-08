@@ -291,4 +291,6 @@ gg. Redirecting the error output to a file
 hh. Writing a Linux script
 ii. Running a Linux batch script in biowulf using sbatch or swarm
 jj. Current directory and previous directory (".", "..").
-kk. Find files/directories and execute commands on them (find).   
+kk. Find files/directories and execute commands on them (find). 
+ll. Loops wit for; do; done
+mm. Conditionals with if; then; fi 
