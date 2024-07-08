@@ -293,8 +293,11 @@ b.	File permissions, how to change permissions (chmod).
 
 
 c.	How to see the content of a text file (more, less, vim, gvim?, others?)
+
 d.	How to see the first lines (head) or last lines (tail) of a file
+
 e.	How to see the content of a directory, navigate along a directory tree and create a folder (ls, ls -l, cd, mkdir) or find out the current working directory (pwd).
+
 
 ```
 >ls
@@ -323,20 +326,34 @@ e.	How to see the content of a directory, navigate along a directory tree and cr
 ```
 
 f.	How to create a text file (vim, cat, touch)
+
 g.	How to rename/move/copy/delete a file (mv, cp, rm).
+
 h.	How to create a file shortcut (ln -s).
+
 i.	How to print a message (echo).
+
 j.	How to redirect the output of a command to a file (“>”).
+
 k.	How to find help for linux commands (man) and scripts/programs (-h --help -help).
+
 l.	How to execute a linux command (importance of upper/lowercase distinction, parameters). 
         Example “command --my_parameter -m --MY_PARAM value -M value file”
+        
 m.	File name extensions (.sh .py .pl .r)
+
 n.	Hidden files (.name)
+
 o.	How to (un)compress a file (gzip, bzip, zip)
+
 p.	How to (un)compress an entire directory (tar)
+
 q.	How to print out a particular column from a table in a text file (cut).
+
 r.	How to retrieve a file from the web (wget, curl).
+
 s.	How to create customized linux commands (alias)
+
 t.	How to define a variable
 u.	How to define an environmental variable (export).
 v.	How to stablish a secure connection to a server (ssh).
