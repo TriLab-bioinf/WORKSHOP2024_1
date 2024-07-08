@@ -25,41 +25,6 @@ Linux directories are organized as a tree, where the root of the tree is named "
 
 So the full path to the directory "share" from Fig. 1 above would be: "/usr/share/" which actually represents the path from root -> usr -> share.
 
-*What is a Linux variable*
-
-A Linux variable is a character string that can holds numeric or character values (e.g. 'Hello', 12, 'Hello World'). They are defined with an '=' sign like this:
-```
-I_am_a_variable=12
-VARIABLE2='Hello World'
-VAriablE2=/I/am/a/single/string
-
-```
-To use the value stored in a value you call the variable with the prefix '$'; For instance:
-```
-# The command below prints out 'Hello World'
-echo $VARIABLE2
-
-# The command below prints out '/I/am/a/single/string'
-echo $VAriablE2
-```
-
-*What is a Linux Environmental variable*
-
-Environmental variables are special cases of the regular variables as defined above, whose values are still viewable (usable) by child processes run from the same terminal. In general, environmental variables hold values that are dynamicaly used by the Operating System. For instance, $USER holds your NIH user name and $SHELL holds the name of the default Linux shell used by your system (e.g. bash).
-
-Environmental variables can be defined with the "export" command this way:
-```
-export ENV_VARIABLE_1='Hello World'
-```
-You can see a list of all the environmental variables and their values present in your system with the command "env" or "printenv":
-```
-env
-
-printenv
-```
-
-**Note in the example above that Linux sees upper and lower cases as completely different characters and therefore, variable $VARIABLE2 is a different variable than $VAriablE2**
-
 ## a.	How to open a terminal in Windows and MacOSX
 
 *MacOSX:*
@@ -71,7 +36,8 @@ XXXXXXXXXXXXXXXXXXXX
 
 ## b. Login into Biowulf and download the workshop's guide
 
-Biowulf is a cluster of High Performance Computing workstations. 
+Biowulf is a cluster ro grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login to a special node/computer called the login node and whose name is "biowulf.nih.gov".
+
 In the terminal, type the following command to login into Biowulf. 
 ```
 ssh $USER@biowulf.nih.gov
@@ -90,6 +56,12 @@ Now type the same command but using all upper cases:
 ECHO Hello World!
 ```
 What happened with the command above?
+
+Now type the command "hostname" to find out the name of the node you are logged in:
+```
+# This should print "biowulf.nih.gov"
+hostname
+```
 
 ## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd), create a folder (mkdir) or find out what is the current working directory (pwd).
 
@@ -222,17 +194,52 @@ cat my_first_file.txt >> my_output_file
 cat my_output_file
 ```
 
-When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
+**h. Local and environmental variables**
+
+*What is a Linux variable*
+
+A Linux variable is a character string that can holds numeric or character values (e.g. 'Hello', 12, 'Hello World'). They are defined with an '=' sign like this:
 ```
-hostname
+I_am_a_variable=12
+VARIABLE2='Hello World'
+VAriablE2=/I/am/a/single/string
+
+```
+To use the value stored in a value you call the variable with the prefix '$'; For instance:
+```
+# The command below prints out 'Hello World'
+echo $VARIABLE2
+
+# The command below prints out '/I/am/a/single/string'
+echo $VAriablE2
 ```
 
-To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the following command:
+*What is a Linux Environmental variable*
+
+Environmental variables are special cases of the regular variables as defined above, whose values are still viewable (usable) by child processes run from the same terminal. In general, environmental variables hold values that are dynamicaly used by the Operating System. For instance, $USER holds your NIH user name and $SHELL holds the name of the default Linux shell used by your system (e.g. bash).
+
+Environmental variables can be defined with the "export" command this way:
+```
+export ENV_VARIABLE_1='Hello World'
+```
+You can see a list of all the environmental variables and their values present in your system with the command "env" or "printenv":
+```
+env
+
+printenv
+```
+
+**Note in the example above that Linux sees upper and lower cases as completely different characters and therefore, variable $VARIABLE2 is a different variable than $VAriablE2**
+
+**h. Starting an interactive session in Biowulf**
+When you login into Biowulf, you are actually loging in into a special login computer or "node" named "biowulf.nih.gov" that has a small amount of memory and CPUs and therefore, it cannot run any programs. In fact, NIH doesn't allow you to run any processes in the login node. 
+
+To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the "sinteractive" command:
 ```
 # Start an interactive session within Biowulf
 sinteractive
 
-# Find out the name of the interactive node 
+# Find out the name of the new interactive node 
 hostname
 ```
 
