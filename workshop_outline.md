@@ -51,7 +51,7 @@ Environmental variables can be defined with the "export" command this way:
 ```
 export ENV_VARIABLE_1='Hello World'
 ```
-You can see all the environmental variables present in your system with the command "env" or "printenv":
+You can see a list of all the environmental variables and their values present in your system with the command "env" or "printenv":
 ```
 env
 
