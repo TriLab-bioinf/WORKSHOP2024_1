@@ -84,6 +84,39 @@ ls -lrth /usr/
 ```
 Can you see any differences?
 
+You can jump to another directory within the file system with the "cd" (change dir) command like so:
+```
+ch /usr
+```
+
+You can go back to your previous directory with the "-" parameter of the "cd" comand:
+```
+cd -
+
+# Print new working directory
+pwd
+```
+
+When working with directories there are three special characters: 
+
+"**.**" => is synonym of the current directory
+
+"**..**" => is synonym of the directory immediately upstream of the current directory
+
+"**~**" => is synonym of your home directory (/home/$USR/)
+
+For example, try the following:
+```
+# Go to your home directory /home/$USER/
+cd ~
+
+# While in your /home/$USER/ directory, list the content of the /home/ directory
+ls ..
+
+# While in your /home/$USER/ directory, list the content of the root directory (/)
+ls ../..
+```
+
 
 When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
 ```
