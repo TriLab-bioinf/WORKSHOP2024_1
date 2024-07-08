@@ -262,14 +262,17 @@ Mount                        Used      Quota  Percent    Files    Limit  Percent
 /data(Hintonlab):          1.7 TB     2.0 TB   84.80%    46486 32000000    0.15%
 /home:                     3.7 GB    16.0 GB   23.06%    38457      n/a    0.00%
 ```
+The "/home:" corresponds to your /home/$USER/ directory and the "/data:" correspsponds to your /data/$USER/ directory. If you look at the "Quota" column (actual amount of disk space available) you will see that your /data/$USER/ folder has way more space available than your home directory. The idea for this is that you should always work on your /data/$USER/ directory. Your home directory is reserved for saving configuration files for customizing your system (e.g. how the Terminal looks like, customizing the values of some useful environmental variables or Linux commands, etc.). 
 
-
+**j. Downloading the WORKSHOP2024_1 guide from the GitHub website into your /data/ directory**
 
 Run the following commands in the interactive server:
 ```
 cd /data/$USER/
 git clone https://github.com/TriLab-bioinf/WORKSHOP2024_1.git
+ls -l
 ```
+You will see a new directory called *WORKSHOP2024_1*.
 
 ## c.	How to list the content of the current directory (ls), navigate along a directory tree (cd), create a folder (mkdir) or find out what is the current working directory (pwd).
 
