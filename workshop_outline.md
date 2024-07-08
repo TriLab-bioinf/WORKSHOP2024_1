@@ -31,7 +31,7 @@ A Linux variable is a character string that can holds numeric or character value
 ```
 I_am_a_variable=12
 VARIABLE2='Hello World'
-VAriablE3=/I/am/a/single/string
+VAriablE2=/I/am/a/single/string
 
 ```
 To use the value stored in a value you call the variable with the prefix '$'; For instance:
@@ -39,7 +39,10 @@ To use the value stored in a value you call the variable with the prefix '$'; Fo
 # The command below prints out 'Hello World'
 echo $VARIABLE2
 
+# The command below prints out '/I/am/a/single/string'
+echo $VAriablE2
 ```
+**Note in the example above that Linux considers upper and lower cases as completely different characters and therefore, the variable $VARIABLE2 is different than $VAriablE2**
 
 ## a.	How to open a terminal in Windows and MacOSX
 
