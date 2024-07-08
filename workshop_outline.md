@@ -231,7 +231,7 @@ printenv
 
 **Note in the example above that Linux sees upper and lower cases as completely different characters and therefore, variable $VARIABLE2 is a different variable than $VAriablE2**
 
-**h. Starting an interactive session in Biowulf**
+**i. Starting an interactive session in Biowulf**
 When you login into Biowulf, you are actually loging in into a special login computer or "node" named "biowulf.nih.gov" that has a small amount of memory and CPUs and therefore, it cannot run any programs. In fact, NIH doesn't allow you to run any processes in the login node. 
 
 To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the "sinteractive" command:
@@ -242,6 +242,17 @@ sinteractive
 # Find out the name of the new interactive node 
 hostname
 ```
+
+Now let's print out the values of one of the local and environmental variables we defined in point "h" above:
+```
+# This is a local variable
+echo $I_am_a_variable
+
+# This is an environmental variable defined with "export"
+echo $ENV_VARIABLE_1
+```
+What happened with the values of *$I_am_a_variable* and *$ENV_VARIABLE_1*?
+
 
 Go to 
 
