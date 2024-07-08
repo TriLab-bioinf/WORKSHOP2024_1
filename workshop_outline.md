@@ -116,6 +116,19 @@ ls ..
 # While in your /home/$USER/ directory, list the content of the root directory (/)
 ls ../..
 ```
+To create a new directory within your home directory
+```
+# Create folder_1
+mkdir folder_1
+
+# Check that the new folder folder_1 is there
+ls
+
+# Go to folder_1
+cd ./folder_1
+```
+Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
+
 
 
 When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
