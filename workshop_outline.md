@@ -135,7 +135,7 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
-## d. How to create a text file with the "nano" editor**
+**d. How to create a text file with the "nano" editor**
 Go to the ~/folder_1 directory and run the following command:
 ```
 nano my_first_file.txt
