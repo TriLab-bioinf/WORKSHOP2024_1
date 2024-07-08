@@ -129,6 +129,15 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
+**d. How to create a text file with the "nano" program**
+Go to the ~/folder_1 directory and run the following command:
+```
+nano my_first_file.txt
+```
+You will see a new screen with the Terminal that looks like this:
+
+
+
 
 
 When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
