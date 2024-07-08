@@ -129,16 +129,47 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
-**d. How to create a text file with the "nano" program**
+**d. How to create a text file with the "nano" editor**
 Go to the ~/folder_1 directory and run the following command:
 ```
 nano my_first_file.txt
 ```
 You will see a new screen with the Terminal that looks like this:
+![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/nano.png)
 
+Type the following text:
+```
+This is my first file
+Hello World!
+Bye
+```
+Save the file by typing ctrl-o and exit the file woth ctrl-x
 
+**e. Visualize the content of text files with "more", "less" or "cat"**
+```
+# Using more
+more my_first_file.txt
 
+# Using less
+less my_first_file.txt
 
+# Using cat
+cat my_first_file.txt
+```
+
+**f. Copy a file (cp), rename/move a file (mv) or delete or remove a file (rm)**
+Let's copy "my_first_file.txt" to another file called "my_second_file.txt"
+```
+cp my_first_file.txt my_second_file.txt
+```
+Rename my_second_file.txt as my_new_file
+```
+mv my_second_file.txt my_new_file
+```
+Delete or remove my_new_file (WARNING: be careful because is is not possible to recove any deleted file with the "rm" command.
+```
+rm my_new_file
+```
 
 When you login into Biowulf, you are actually loging in into a special login computer or "node" that cannot run any programs. To find out the name of the login node type the following:
 ```
