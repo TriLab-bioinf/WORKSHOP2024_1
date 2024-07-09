@@ -125,9 +125,8 @@ chmod o-r file_1
 # Make file_1 executable for the owner and the group (- rwx r-x r--):
 chmod u+x file_1
 chmod g+x file_1
-
-
 ```
+**Note: Be careful modifying file/directory permissions, as it might cause unexpected results!!!**
 
 You can find out more about Linux permissions [here](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions).
 
@@ -530,7 +529,7 @@ Save the file with ctrl-x and run it with the following command:
 sh motif_finder.sh
 ``` 
 
-Scripts can incorporate information from the command line to be processed at running time. This can be useful to add information about input and output files among other things. For instance, we can improve the script above by allowing the user to enter the motif and input files from the command line, instead of being hardcoded in the script. This makes the script more flexible and therefore, more useful:
+Scripts can incorporate information from the command line to be processed at running time. This can be useful, for example, for adding information about input and output files among other things. For instance, we can improve the script above by allowing the user to enter the motif and input and output files from the command line, instead of being "hardcoded" in the script. This makes the script more flexible and therefore, more useful:
 ```
 nano motif_finder_v2.sh  
 ```
@@ -538,21 +537,90 @@ nano motif_finder_v2.sh
 Within nano, type or copy-paste the following:
 ```
 # To run the program type:
-# sh motif_finder.sh input_file_name motif
-# E.g. sh motif_finder.sh short_seq.fasta AA..CC
+# sh motif_finder_v2.sh input_file_name motif
+# E.g. sh motif_finder.sh short_seq.fasta AA..CC motif_finder_v2_output
 
 # Create variables
 INPUT_FILE=$1
 MY_MOTIF=$2
-OUTPUT_FILE="atg_motif.fasta"
+OUTPUT_FILE=$3.fasta
 
 grep --no-group-separator -B 1 $MY_MOTIF $INPUT_FILE > $OUTPUT_FILE  
 
 echo Done!
-
 ```
+Save the file with ctrl-x and run it with the following command:
+```
+sh motif_finder_v2.sh short_seq.fasta AA..CC
+``` 
+Note that so far, in order to execute the script, you need to add the "sh" at the fron of the script. To avoid this, you need to implement two modifications to your script:
 
-## q. Runnin a Linux script in the grid with sbatch.
+1. Add at the very top of your script a special line that indicates tLinux what command to use for running your script. This special line looks like this:
+   ```
+   #!/usr/bin/bash
+   ```
+   Now let's create a new version of our script from the previous one:
+   ```
+   cp motif_finder_v2.sh motif_finder_v3.sh
+   ```
+   Then, open motif_finder_v3.sh with "nano" and add the following line at the very top "#!/usr/bin/bash". Your script should look like:
+   ```
+   #!/usr/bin/bash
+   
+   # To run the program type:
+   # sh motif_finder.sh input_file_name motif
+   # E.g. sh motif_finder.sh short_seq.fasta AA..CC
+   
+   # Create variables
+   INPUT_FILE=$1
+   MY_MOTIF=$2
+   OUTPUT_FILE=$3.fasta
+   
+   grep --no-group-separator -B 1 $MY_MOTIF $INPUT_FILE > $OUTPUT_FILE
+   
+   echo Done!
+   ```
+
+3. Now change the permissions of your script to indicate that the script can be executed by the owner:
+```
+# Check the permissions of your script:
+ls -l motif_finder_v3.sh
+
+# Add permission to execute
+chmod u+x motif_finder_v3.sh
+
+# Check the file permissions again
+ls -l motif_finder_v3.sh
+```
+Now try to run your script like so:
+```
+motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+```
+What happened? Did you get the following message *"bash: motif_finder_v3.sh: command not found"*? 
+
+The reason of the *command not found* error message is that Linux always look for the commands entered from the command line within specific directories defined in the environmental variable *PATH*. If your script is not in one of those directories, then you will receive an error message. 
+
+Let's find out where Linix is looking for commands by typing the following:
+```
+echo $PATH
+```
+You should see a bunch of directory paths separated by ":". 
+
+One potential solution to the error message problem would be to move or copy your script to one of those paths. I usually create a special directory within my /data/$USER/ folder named "bin/" where I keep all my scripts and then I add the path to that directory (/data/$USER/bin/) to the PATH environmental variable like this:
+```
+export PATH=/data/$USER/bin/:$PATH
+```
+Now, when I move/copy my script to /data/$USER/bin/ I can call it from anywhere in the directory structure.
+
+Another alternative is to add the path to your script so Linux knows where to find it at running time. Try to run the script this way:
+```
+./motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+```
+You should see the "Done!" message now. 
+
+
+
+## q. Running a Linux script in the grid with sbatch.
   
 b.	File permissions, how to change permissions (chmod).
 
