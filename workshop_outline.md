@@ -581,52 +581,91 @@ Note that so far, in order to execute the script, you need to add the "sh" at th
    echo Done!
    ```
 
-3. Now change the permissions of your script to indicate that the script can be executed by the owner:
-```
-# Check the permissions of your script:
-ls -l motif_finder_v3.sh
-
-# Add permission to execute
-chmod u+x motif_finder_v3.sh
-
-# Check the file permissions again
-ls -l motif_finder_v3.sh
-```
-Now try to run your script like so:
-```
-motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
-```
-What happened? Did you get the following message *"bash: motif_finder_v3.sh: command not found"*? 
-
-The reason of the *command not found* error message is that Linux always look for the commands entered from the command line within specific directories defined in the environmental variable *PATH*. If your script is not in one of those directories, then you will receive an error message. 
-
-Let's find out where Linix is looking for commands by typing the following:
-```
-echo $PATH
-```
-You should see a bunch of directory paths separated by ":". 
-
-One potential solution to the error message problem would be to move or copy your script to one of those paths. I usually create a special directory within my /data/$USER/ folder named "bin/" where I keep all my scripts and then I add the path to that directory (/data/$USER/bin/) to the PATH environmental variable like this:
-```
-export PATH=/data/$USER/bin/:$PATH
-```
-Now, when I move/copy my script to /data/$USER/bin/ I can call it from anywhere in the directory structure.
-
-Another alternative is to add the path to your script so Linux knows where to find it at running time. Try to run the script this way:
-```
-./motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
-```
-You should see the "Done!" message now. 
-
-
+2. Now change the permissions of your script to indicate that the script can be executed by the owner:
+   ```
+   # Check the permissions of your script:
+   ls -l motif_finder_v3.sh
+   
+   # Add permission to execute
+   chmod u+x motif_finder_v3.sh
+   
+   # Check the file permissions again
+   ls -l motif_finder_v3.sh
+   ```
+   Now try to run your script like so:
+   ```
+   motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+   ```
+   What happened? Did you get the following message *"bash: motif_finder_v3.sh: command not found"*? 
+   
+   The reason of the *command not found* error message is that Linux always look for the commands entered from the command line within specific directories defined in the environmental variable *PATH*. If your script is not in one of those directories, then you will receive an error message. 
+   
+   Let's find out where Linix is looking for commands by typing the following:
+   ```
+   echo $PATH
+   ```
+   You should see a bunch of directory paths separated by ":". 
+   
+   One potential solution to the error message problem would be to move or copy your script to one of those paths. I usually create a special directory within my /data/$USER/ folder named "bin/" where I keep all my scripts and then I add the path to that directory (/data/$USER/bin/) to the PATH environmental variable like this:
+   ```
+   export PATH=/data/$USER/bin/:$PATH
+   ```
+   Now, when I move/copy my script to /data/$USER/bin/ I can call it from anywhere in the directory structure.
+   
+   Another alternative is to add the path to your script so Linux knows where to find it at running time. Try to run the script this way:
+   ```
+   ./motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+   ```
+   You should see the "Done!" message now. 
 
 ## q. Running a Linux script in the grid with sbatch.
-  
-b.	File permissions, how to change permissions (chmod).
+In general, when processing large files, you will be running your programs remotely on some node within Biowulf. The reason for this is becuase these processes usually take several hours or days to run. Running such large jobs interactively have the following disadvantages:
+1. You cannot run another job in your Terminal until the current running job has finished.
+2. If the process is still running and you need to logout, the interactive job will be stopped (there are some work arounds for this though).
+
+Biowulf has two main ways for launching jobs on remote nodes:
+1. Using "sbatch", for running individual processes (see **Slurm Job Submission Summary** section in [Biowulf user guide](https://hpc.nih.gov/docs/userguide.html)).
+2. Using [swarm](https://hpc.nih.gov/apps/swarm.html), for running several processes in parallel, all using the same resources (memory, CPUs).
+
+To try remote job submissions, we will generate a modified version of the motif_finder_v3.sh script, so it takes longer to run. First, make a copy of motif_finder_v3.sh named motif_finder_v4.sh:
+```
+cp motif_finder_v3.sh motif_finder_v4.sh
+
+# Note that the executble permission for the owner is inherited by motif_finder_v4.sh
+ls -l
+```
+Then, with nano, add the line "sleep 30" underneath the "grep" command to motif_finder_v4.sh. The new version of the script should look like:
+```
+#!/usr/bin/bash
+
+# To run the program type:
+# sh motif_finder.sh input_file_name motif
+# E.g. sh motif_finder.sh short_seq.fasta AA..CC
+
+# Create variables
+INPUT_FILE=$1
+MY_MOTIF=$2
+OUTPUT_FILE=$3.fasta
+
+grep --no-group-separator -B 1 $MY_MOTIF $INPUT_FILE > $OUTPUT_FILE
+
+sleep 30
+
+echo Done!
+```
 
 
+Now, let's run motif_finder_v4.sh remotely with sbatch:
+```
+sbatch ./motif_finder_v4.sh short_seq.fasta AA..CC motif_finder_v4_output
+```
+The terminal should output a number right after you hit "return". That is the process ID assigned to your job.
 
-
+To check the status of your job in the remote node type the following:
+```
+showq -u $USER
+```
+You shoud
 
 
 
