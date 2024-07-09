@@ -234,7 +234,7 @@ Rename my_second_file.txt as my_new_file
 ```
 mv my_second_file.txt my_new_file
 ```
-Delete or remove my_new_file (WARNING: be careful because is is not possible to recove any deleted file with the "rm" command.
+Delete or remove my_new_file (WARNING: be careful because is is not possible to recover any deleted file with the "rm" command.
 ```
 rm my_new_file
 ```
