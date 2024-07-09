@@ -79,7 +79,15 @@ Let's find out the content of the root directory "/":
 # ls + <SPACE> + /
 ls /
 ```
-The behaviour of Linux commands can be modified by adding one or more parameters to the command. Parameters are usually defined by the "-" symbol followed by a letter (e.g. -h) or "--" followed by a word (e.g. --help). For example, try the following variations of the "ls" command to display the content of the /usr/ firectory:
+The behaviour of Linux commands can be modified by adding one or more parameters to the command. Parameters are usually defined by the "-" symbol followed by a letter (e.g. -h) or "--" followed by a word (e.g. --help). 
+
+You can learn about the function of any Linux command and the parameters available with the "man" (manual) command like this:
+```
+man ls
+```
+You can go UP or DOWN the manual page with the keyword arrows.
+
+Now, try the following variations of the "ls" command to display the content of the /usr/ firectory:
 
 ```
 ls -l /usr/
@@ -673,9 +681,31 @@ Figure showing job 30288786 is running (STATTE=RUNNING) on node cn4276.
 
 While your job is running, a file is created in your current directory named slurm-*JOBID*.out (e.g. slurm-30288786.out) that contains what is being output on the remote node screen. You can monitor this file to check for error messages or any other useful information.
 
-Now let's submit several instances of motif_finder_v4.sh looking for different motifs using "swarm".
+Now let's submit several instances of motif_finder_v4.sh looking for different motifs using "swarm". For this we will create the file swarm_job with nano containing the following lines:
 
+```
+./motif_finder_v4.sh short_seq.fasta AA..CC AA..CC_motif_output
+./motif_finder_v4.sh short_seq.fasta ATG ATG_motifoutput
+./motif_finder_v4.sh short_seq.fasta AA..GG AA..GG_motif_output
+./motif_finder_v4.sh short_seq.fasta TT..C TT..C_motif_output
+```
+Swarm generates two log files per process (each of the lines in your script). For instance:
+```
+swarm_30292105_3.o
+swarm_30292105_3.e
+```
+swarm_30292105_3.o stores the standard output from your program to the screen on the remote computer.
 
+swarm_30292105_3.e stores the standard error output from your program to the screen on the remote computer, so error messages will be recorded here.
+
+## r. Other useful Linux commands 
+
+1. "which": To find out the full path of a command or program.
+2. "find": to search for files or directories. It can alsoexecute commands on the files/directories found.
+3. "sed": search a string in a text and replace it by another text.
+4. "wget": to download files from the web.
+5. "for;do;done": for running commands through a list of values.
+6. "if;then;fi": to run commands based on a condition is true or false.
 
 
 
