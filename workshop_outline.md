@@ -703,9 +703,11 @@ swarm_30292105_3.e stores the standard error output from your program to the scr
 1. "which": To find out the full path of a command or program.
 2. "find": to search for files or directories. It can alsoexecute commands on the files/directories found.
 3. "sed": search a string in a text and replace it by another text.
-4. "wget": to download files from the web.
-5. "for;do;done": for running commands through a list of values.
-6. "if;then;fi": to run commands based on a condition is true or false.
+4. "ln -s": to create symbolic links (shortcuts) to files or folders.
+5. "alias": to create new commands using combinations of other Linux commands.
+6. "wget": to download files from the web.
+7. "for;do;done": for running commands through a list of values.
+8. "if;then;fi": to run commands based on a condition is true or false.
 
 
 
