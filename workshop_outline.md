@@ -560,9 +560,9 @@ Save the file with ctrl-x and run it with the following command:
 ```
 sh motif_finder_v2.sh short_seq.fasta AA..CC
 ``` 
-Note that so far, in order to execute the script, you need to add the "sh" at the fron of the script. To avoid this, you need to implement two modifications to your script:
+Note that so far, in order to execute the script, you need to add the "sh" at the front of the script. To avoid this, you need to implement two modifications to your script:
 
-1. Add at the very top of your script a special line that indicates tLinux what command to use for running your script. This special line looks like this:
+1. Add at the very top of your script a special line that indicates to Linux what command to use for running your script. This special line looks like this:
    ```
    #!/usr/bin/bash
    ```
