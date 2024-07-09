@@ -31,8 +31,7 @@ So the full path to the directory "share" from Fig. 1 above would be: "/usr/shar
 In Finder, go to Applications > Utilities > Terminal.app
 
 *WINDOWS:*
-XXXXXXXXXXXXXXXXXXXX 
-**(Yuejun, could you please add the steps to open a Terminal in Windows and login into Biowulf? )**
+On Windows Start Menu, open Windows PowerShell
 
 ## b. Login into Biowulf and download the workshop's guide
 
@@ -141,7 +140,7 @@ You can find out more about Linux permissions [here](https://www.linuxfoundation
 
 You can jump to another directory within the file system with the "cd" (change dir) command like so:
 ```
-ch /usr
+cd /usr
 ```
 
 You can go back to your previous directory with the "-" parameter of the "cd" comand:
