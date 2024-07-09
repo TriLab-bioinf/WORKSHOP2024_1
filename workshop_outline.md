@@ -653,8 +653,6 @@ sleep 30
 
 echo Done!
 ```
-
-
 Now, let's run motif_finder_v4.sh remotely with sbatch:
 ```
 sbatch ./motif_finder_v4.sh short_seq.fasta AA..CC motif_finder_v4_output
@@ -673,7 +671,7 @@ Figure showing job 30288786 is still PENDING (not running) and hasen't been assi
 ![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/showq_running.png)
 Figure showing job 30288786 is running (STATTE=RUNNING) on node cn4276.
 
-
+While your job is running, a file is created in your current directory named slurm-*JOBID*.out (e.g. slurm-30288786.out) that contains what is being output on the remote node screen. You can monitor this file to check for error messages or any other useful information.
 
 
 
