@@ -136,7 +136,7 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
-**d. How to create a text file with the "nano" editor**
+## d. How to create a text file with the "nano" editor
 Go to the ~/folder_1 directory and run the following command:
 ```
 nano my_first_file.txt
@@ -152,7 +152,7 @@ Bye
 ```
 Save the file by typing ctrl-o and exit the file woth ctrl-x
 
-**e. Visualize the content of text files with "more", "less", "cat", "head" or "tail" and find out the number of lines, words and characters they contain with "wc" (word count).**
+## e. Visualize the content of text files with "more", "less", "cat", "head" or "tail" and find out the number of lines, words and characters they contain with "wc" (word count).
 ```
 # Using more
 more my_first_file.txt
@@ -178,7 +178,7 @@ The last command above "wc my_first_file.txt" should have printed out the follow
 ```
 Where "3" is the number of lines, "8" the number of words and "39" is the number of characters, including the end-of-line character that is invisible.   
 
-**f. Copy a file (cp), rename/move a file (mv) or delete or remove a file (rm)**
+## f. Copy a file (cp), rename/move a file (mv) or delete or remove a file (rm)
 Let's copy "my_first_file.txt" to another file called "my_second_file.txt"
 ```
 cp my_first_file.txt my_second_file.txt
@@ -192,7 +192,7 @@ Delete or remove my_new_file (WARNING: be careful because is is not possible to 
 rm my_new_file
 ```
 
-**g. Redirecting the output of a command to a file with ">" and ">>"**
+## g. Redirecting the output of a command to a file with ">" and ">>"
 We can save the output of a command into a file with the special character ">" like this:
 ```
 ls / > my_output_file
@@ -208,7 +208,7 @@ cat my_first_file.txt >> my_output_file
 cat my_output_file
 ```
 
-**h. Local and environmental variables**
+## h. Local and environmental variables
 
 *What is a Linux variable*
 
@@ -243,7 +243,7 @@ env
 
 printenv
 ```
-**i. Starting an interactive session in Biowulf**
+## i. Starting an interactive session in Biowulf
 When you login into Biowulf, you are actually loging in into a special login computer or "node" named "biowulf.nih.gov" that has a small amount of memory and CPUs and therefore, it cannot run any programs. In fact, NIH doesn't allow you to run any processes in the login node. 
 
 To run any jobs within Biowulf, you first need to start an interactive session with another computer node within Biowulf by running the "sinteractive" command:
@@ -278,7 +278,7 @@ Mount                        Used      Quota  Percent    Files    Limit  Percent
 ```
 The "/home:" corresponds to your /home/$USER/ directory and the "/data:" correspsponds to your /data/$USER/ directory. If you look at the "Quota" column (actual amount of disk space available) you will see that your /data/$USER/ folder has way more space available than your home directory. The idea for this is that you should always work on your /data/$USER/ directory. Your home directory is reserved for saving configuration files for customizing your system (e.g. how the Terminal looks like, customizing the values of some useful environmental variables or Linux commands, etc.). 
 
-**j. Downloading the WORKSHOP2024_1 guide from the GitHub website into your /data/ directory**
+## j. Downloading the WORKSHOP2024_1 guide from the GitHub website into your /data/ directory
 
 Run the following commands in the interactive server:
 ```
@@ -295,7 +295,7 @@ cd WORKSHOP2024_1
 tree 
 ```  
 
-**k. Compressing and decompressing files with "gzip" and "gunzip" commands.**
+## k. Compressing and decompressing files with "gzip" and "gunzip" commands.
 
 Create a new directory within WORKSHOP2024_1 named "working_dir":
 ```
@@ -325,7 +325,7 @@ Now, let's decompress short_seq.fasta.gz with the "gunzip" command:
 gunzip short_seq.fasta.gz
 ```
 
-**l. More advanced Linux commands for searching patterns (grep), sorting content (sort) and counting instances of strings**
+## l. More advanced Linux commands for searching patterns (grep), sorting content (sort) and counting instances of strings
 
 Look at te first 10 lines of the short_seq.fasta file with "head":
 ```
@@ -406,14 +406,14 @@ uniq -c my_motif.sorted > my_motif.counts
 cat my_motif.counts
 ```
 
-**m. Concatenating commands with the pipe character "|"**
+## m. Concatenating commands with the pipe character "|".
 
 In Linux it is possible to concatenate two or more commands with the character "|" so the output of the command on the left of the pipe can be used as input and modified by the command on the right of the pipe. Using this feature, we could have been run the previous exercise to count the number of instances of each possible AANNCC motif in the following way:
 ```
 grep -o 'AA..CC. short_seq.fasta | sort | uniq -c 
 ```   
 
-**n. Extracting specific columns (fields) from files with a table-like format, such as a csv file or a tabulated file with the command "cut"**
+## n. Extracting specific columns (fields) from files with a table-like format, such as a csv file or a tabulated file with the command "cut".
 
 The file blastn_output.bn is a tabulated output from a sequence similarity search with BLASTN. Let's take a look at the file with "head" 
 ```
@@ -433,7 +433,7 @@ cut -f 1-3,16 blastn_output.bn
 cut -s -f 1-3,16 blastn_output.bn
 ```
 
-**o. Searching, Loading and running software installed in Biowulf**
+## o. Searching, Loading and running software installed in Biowulf.
 In Biowulf you can find most of the bioinformatics programs commonly used for sequence analysis. To investigate if a program of interet is already installed in Biowulf, you use the command "module avail NAME_OF_SOFTWARE":
 ```
 module avail blast
@@ -458,7 +458,7 @@ Sometimes it is necessary to "unload" a loaded program due to compatibility issu
 module unload samtools
 ```
 
-**p. Writing a Linux script**
+## p. Writing a Linux script.
 A Linux script is simply a text file with a number of commands to be run. Let's create a new file named script_1.sh with the "nano" editor and enter the following commands:  
 ```
 echo This is my first script
@@ -511,7 +511,7 @@ echo Done!
 
 ```
 
-**q. Runnin a Linix script in the grid with sbatch**
+## q. Runnin a Linix script in the grid with sbatch.
   
 b.	File permissions, how to change permissions (chmod).
 
