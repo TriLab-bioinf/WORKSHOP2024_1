@@ -673,7 +673,7 @@ Figure showing job 30288786 is running (STATTE=RUNNING) on node cn4276.
 
 While your job is running, a file is created in your current directory named slurm-*JOBID*.out (e.g. slurm-30288786.out) that contains what is being output on the remote node screen. You can monitor this file to check for error messages or any other useful information.
 
-
+Now let's submit several instances of motif_finder_v4.sh looking for different motifs using "swarm".
 
 
 
