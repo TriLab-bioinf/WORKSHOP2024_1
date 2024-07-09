@@ -511,7 +511,7 @@ echo Done!
 
 ```
 
-## q. Runnin a Linix script in the grid with sbatch.
+## q. Runnin a Linux script in the grid with sbatch.
   
 b.	File permissions, how to change permissions (chmod).
 
