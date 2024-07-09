@@ -91,6 +91,28 @@ ls -lrth /usr/
 ```
 Can you see any differences?
 
+When running the command "ls -l" you see the contents of a directory in a table-like format similar to this:
+![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/ls_output.png)
+
+Starting from the left, the columns display the following information:
+
+1. File/directory permissions.
+2. Number of folders inside a given directory
+3. Owner of the file/directory
+4. Group of the owner of the file/directory
+5. File/directory size bites
+6. Month of file/directory creation/modification
+7. Day number of file/directory creation/modification
+8. Year of file/directory creation/modification
+9. File/directory name
+
+   
+**A note about file/directoyr permissions:**
+In Linux, permissions are set by a string of 10 characters that define the permissions to read (r), write (w) and execute (x) a file or directory for the owner (u), the group (g) and all the other users of the systme (o):
+
+![]()
+You can find out more about Linux permissions [here](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions).
+
 
 You can jump to another directory within the file system with the "cd" (change dir) command like so:
 ```
