@@ -259,7 +259,7 @@ cat my_output_file
 
 *What is a Linux variable*
 
-A Linux variable is a character string that can holds numeric or character values (e.g. 'Hello', 12, 'Hello World'). They are defined with an '=' sign like this:
+A Linux variable is a character string that can hold numeric or character values (e.g. 'Hello', 12, 'Hello World'). They are defined with an '=' sign like this:
 ```
 I_am_a_variable=12
 VARIABLE2='Hello World'
