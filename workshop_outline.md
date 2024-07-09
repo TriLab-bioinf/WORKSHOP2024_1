@@ -91,6 +91,7 @@ ls -lrth /usr/
 ```
 Can you see any differences?
 
+
 You can jump to another directory within the file system with the "cd" (change dir) command like so:
 ```
 ch /usr
@@ -104,13 +105,13 @@ cd -
 pwd
 ```
 
-When working with directories there are three special characters: 
+When working with directories there are three special directory names: 
 
 "**.**" => is synonym of the current directory
 
-"**..**" => is synonym of the directory immediately upstream of the current directory
+"**..**" => is synonym of the directory immediately upstream (closer to the root) of the current directory
 
-"**~**" => is synonym of your home directory (/home/$USR/)
+"**~**" => is synonym of your home directory (/home/$USER/)
 
 For example, try the following:
 ```
