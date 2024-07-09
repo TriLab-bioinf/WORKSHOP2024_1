@@ -1,0 +1,5 @@
+./motif_finder_v4.sh short_seq.fasta AA..CC AA..CC_motif_output
+./motif_finder_v4.sh short_seq.fasta ATG ATG_motifoutput
+./motif_finder_v4.sh short_seq.fasta AA..GG AA..GG_motif_output
+./motif_finder_v4.sh short_seq.fasta TT..C TT..C_motif_output
+
