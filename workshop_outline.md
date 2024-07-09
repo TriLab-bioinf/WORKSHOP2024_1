@@ -108,9 +108,27 @@ Starting from the left, the columns display the following information:
 
    
 **A note about file/directoyr permissions:**
-In Linux, permissions are set by a string of 10 characters that define the permissions to read (r), write (w) and execute (x) a file or directory for the owner (u), the group (g) and all the other users of the systme (o):
+In Linux, permissions are set by a string of 10 characters that define the permissions to read (r), write (w) and execute (x) a file or directory for the owner, the group and all the other users of the system.
 
-![]()
+![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/Permissions_figure.png)
+
+File/directoy permissions can be modified with the Linux command "chmod" using the +/- signs to grant or revoque permissions and the characters "a", "u", "g" and "o" to indicate "all users", "the owner", "the group", "other users":
+```
+# Original permission of file_1: - rw- r-- r--
+
+# Grant (+) read and write permissions for all users (- rw- rw- rw-):
+chmod a+rw file_1
+
+# Remove (-) read permission for "other users" (- rw- r-- ---):
+chmod o-r file_1
+
+# Make file_1 executable for the owner and the group (- rwx r-x r--):
+chmod u+x file_1
+chmod g+x file_1
+
+
+```
+
 You can find out more about Linux permissions [here](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions).
 
 
