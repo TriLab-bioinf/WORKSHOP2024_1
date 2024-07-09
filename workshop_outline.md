@@ -665,8 +665,13 @@ To check the status of your job in the remote node type the following:
 ```
 showq -u $USER
 ```
-You shoud
+You shoud see a table similar to one of the figures below on your terminal:
+![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/showq_pending.png)
+Figure showing job 30288786 is still PENDING (not running) and hasen't been assigned a node yet.
 
+
+![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/showq_running.png)
+Figure showing job 30288786 is running (STATTE=RUNNING) on node cn4276.
 
 
 
