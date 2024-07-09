@@ -607,7 +607,7 @@ Note that so far, in order to execute the script, you need to add the "sh" at th
    
    The reason of the *command not found* error message is that Linux always look for the commands entered from the command line within specific directories defined in the environmental variable *PATH*. If your script is not in one of those directories, then you will receive an error message. 
    
-   Let's find out where Linix is looking for commands by typing the following:
+   Let's find out where Linux is looking for commands by typing the following:
    ```
    echo $PATH
    ```
