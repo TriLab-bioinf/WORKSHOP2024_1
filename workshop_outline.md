@@ -268,7 +268,7 @@ VARIABLE2='Hello World'
 VAriablE2=/I/am/a/single/string
 
 ```
-To use the value stored in a value you call the variable with the prefix '$'; For instance:
+To use or recall the value stored in a variable you call the variable with the prefix '$'; For instance:
 ```
 # The command below prints out 'Hello World'
 echo $VARIABLE2
