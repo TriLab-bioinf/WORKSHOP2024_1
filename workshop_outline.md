@@ -98,7 +98,7 @@ ls -lrth /usr/
 ```
 Can you see any differences?
 
-When running the command "ls -l" you see the contents of a directory in a table-like format similar to this:
+When running the "ls" command with the parameter "-l" you see the contents of a directory in a table-like format similar to this:
 ![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/ls_output.png)
 
 Starting from the left, the columns display the following information:
