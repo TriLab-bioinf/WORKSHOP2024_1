@@ -149,7 +149,7 @@ You can go back to your previous directory with the "-" parameter of the "cd" co
 ```
 cd -
 
-# Print new working directory
+# Print new working directory to the screen
 pwd
 ```
 
@@ -246,7 +246,7 @@ We can save the output of a command into a file with the special character ">" l
 ```
 ls / > my_output_file
 
-# Print out the content of my_output_file
+# Print out the content of my_output_file on the screen
 cat my_output_file
 ```
 You can also append the output of a command to another file with the ">>" command like so:
