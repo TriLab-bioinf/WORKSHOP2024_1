@@ -119,7 +119,7 @@ In Linux, permissions are set by a string of 10 characters that define the permi
 
 ![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/Permissions_figure.png)
 
-File/directoy permissions can be modified with the Linux command "chmod" using the +/- signs to grant or revoque permissions and the characters "a", "u", "g" and "o" to indicate "all users", "the owner", "the group", "other users":
+File/directoy permissions can be modified with the Linux command "chmod" using the +/- signs to grant or revoque permissions and the characters "a", "u", "g" and "o" to indicate "all users", "the owner", "the group", and "other users":
 ```
 # Original permission of file_1: - rw- r-- r--
 
