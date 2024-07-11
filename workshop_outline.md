@@ -37,11 +37,11 @@ On Windows Start Menu, open Windows PowerShell
 
 Biowulf is a cluster or grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login into a special node/computer called the login node and whose name is "biowulf.nih.gov".
 
-In the terminal, type the following command to login into Biowulf. 
+In the terminal, type the following command and hit "return" to login into Biowulf. 
 ```
 ssh $USER@biowulf.nih.gov
 ```
-Type your NIH password and press "return".
+You will be prompted to enter your NIH password. Go ahead and then press "return".
 
 Once in Biowulf, run the "echo" Linux command to print out a message into the terminal (Lines starting with the "#' symbol are comments and therefore, they will be ignored by the shell):
 ```
