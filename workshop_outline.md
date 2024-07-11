@@ -8,7 +8,7 @@ Linux is a free and open-source operating system (OS) that manages a computer's 
 
 *What is a Shell?*
 
-A shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common Linux shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but 
+A shell is a program that takes commands from the keyboard and gives them to the operating system to perform. Most common Linux shells are *bash*, *csh* and *zsh*. In Biowulf you will be using *bash* by default, but you can change it with the Linux command "chsh".
 
 *What is a Terminal?*
 
