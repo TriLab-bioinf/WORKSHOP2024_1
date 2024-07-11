@@ -707,6 +707,7 @@ swarm_30292105_3.e stores the standard error output from your program to the scr
 6. "wget": to download files from the web.
 7. "for;do;done": for running commands through a list of values.
 8. "if;then;fi": to run commands based on a condition is true or false.
+9. md5: to check that large files are not corrupted by generating a file-specifc fingerprint.
 
 ## s. Customize the behavior of your shell (bash)
 You can change the default behavior of your bash shell by modifying its configuration file named ".bashrc" located in your home directory. Because this file's name starts with a "." character, it is not visible by default with the "ls" command unless you add the "-a" parameter like so "ls -a".
