@@ -35,7 +35,7 @@ On Windows Start Menu, open Windows PowerShell
 
 ## b. Login into Biowulf and download the workshop's guide
 
-Biowulf is a cluster ro grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login to a special node/computer called the login node and whose name is "biowulf.nih.gov".
+Biowulf is a cluster or grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login to a special node/computer called the login node and whose name is "biowulf.nih.gov".
 
 In the terminal, type the following command to login into Biowulf. 
 ```
@@ -544,7 +544,7 @@ nano motif_finder_v2.sh
 Within nano, type or copy-paste the following:
 ```
 # To run the program type:
-# sh motif_finder_v2.sh input_file_name motif
+# sh motif_finder_v2.sh input_file_name motif output_prefix
 # E.g. sh motif_finder.sh short_seq.fasta AA..CC motif_finder_v2_output
 
 # Create variables
@@ -575,8 +575,8 @@ Note that so far, in order to execute the script, you need to add the "sh" at th
    #!/usr/bin/bash
    
    # To run the program type:
-   # sh motif_finder.sh input_file_name motif
-   # E.g. sh motif_finder.sh short_seq.fasta AA..CC
+   # sh motif_finder_v3.sh input_file_name motif output_prefix
+   # E.g. sh motif_finder_v3.sh short_seq.fasta AA..CC AANNCC_motif
    
    # Create variables
    INPUT_FILE=$1
@@ -601,7 +601,7 @@ Note that so far, in order to execute the script, you need to add the "sh" at th
    ```
    Now try to run your script like so:
    ```
-   motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+   motif_finder_v3.sh short_seq.fasta AA..CC AANNCC_motif_v3_output
    ```
    What happened? Did you get the following message *"bash: motif_finder_v3.sh: command not found"*? 
    
@@ -621,7 +621,7 @@ Note that so far, in order to execute the script, you need to add the "sh" at th
    
    Another alternative is to add the path to your script so Linux knows where to find it at running time. Try to run the script this way:
    ```
-   ./motif_finder_v3.sh short_seq.fasta AA..CC motif_finder_v3_output
+   ./motif_finder_v3.sh short_seq.fasta AA..CC AANNCC_motif_v3_output
    ```
    You should see the "Done!" message now. 
 
@@ -646,8 +646,8 @@ Then, with nano, add the line "sleep 30" underneath the "grep" command to motif_
 #!/usr/bin/bash
 
 # To run the program type:
-# sh motif_finder.sh input_file_name motif
-# E.g. sh motif_finder.sh short_seq.fasta AA..CC
+# sh motif_finder_v4.sh input_file_name motif output_prefix
+# E.g. sh motif_finder_v4.sh short_seq.fasta AA..CC AA..CC_motif
 
 # Create variables
 INPUT_FILE=$1
