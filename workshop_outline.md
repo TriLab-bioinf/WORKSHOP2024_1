@@ -278,7 +278,7 @@ echo $VAriablE2
 ```
 ***Note in the example above that Linux sees upper and lower cases as completely different characters and therefore, variable $VARIABLE2 is a different variable than $VAriablE2***
 
-*What is a Linux Environmental variable*
+*What is a Linux Environmental variable?*
 
 Environmental variables are special cases of the regular variables as defined above, whose values are still viewable (usable) by child processes run from the same terminal. In general, environmental variables hold values that are dynamicaly used by the Operating System. For instance, $USER holds your NIH user name and $SHELL holds the name of the default Linux shell used by your system (e.g. bash).
 
