@@ -35,7 +35,7 @@ On Windows Start Menu, open Windows PowerShell
 
 ## b. Login into Biowulf and download the workshop's guide
 
-Biowulf is a cluster or grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login to a special node/computer called the login node and whose name is "biowulf.nih.gov".
+Biowulf is a cluster or grid of High Performance Computing workstations/computers. Each workstation is called a "node". When you login into the Biowulf cluster, you always login into a special node/computer called the login node and whose name is "biowulf.nih.gov".
 
 In the terminal, type the following command to login into Biowulf. 
 ```
