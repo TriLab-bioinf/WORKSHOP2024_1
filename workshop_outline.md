@@ -84,7 +84,7 @@ You can learn about the function of any Linux command and the parameters availab
 ```
 man ls
 ```
-You can go UP or DOWN the manual page with the keyword arrows.
+You can scroll UP or DOWN the manual page with the keyword arrows.
 
 Now, try the following variations of the "ls" command to display the content of the /usr/ firectory:
 
