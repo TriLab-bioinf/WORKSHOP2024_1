@@ -86,7 +86,7 @@ man ls
 ```
 You can scroll UP or DOWN the manual page with the keyboard arrows.
 
-Now, try the following variations of the "ls" command to display the content of the /usr/ firectory:
+Now, try the following variations of the "ls" command to display the content of the /usr/ directory:
 
 ```
 ls -l /usr/
