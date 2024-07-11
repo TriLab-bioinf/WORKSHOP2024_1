@@ -21,7 +21,7 @@ Linux directories are organized as a tree, where the root of the tree is named "
 
 ![](https://linuxhandbook.com/content/images/2020/06/linux-directory-structure.png)
 
-*Figure 1. Reference: [The Linux Handbook](https://linuxhandbook.com/linux-directory-structure/)*
+*Figure 1. Example of a Linux directory structure. Reference: [The Linux Handbook](https://linuxhandbook.com/linux-directory-structure/)*
 
 So the full path to the directory "share" from Fig. 1 above would be: "/usr/share/" which actually represents the path from root -> usr -> share.
 
