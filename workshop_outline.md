@@ -114,7 +114,7 @@ Starting from the left, the columns display the following information:
 9. File/directory name
 
    
-**A note about file/directoyr permissions:**
+**A note about file/directory permissions:**
 In Linux, permissions are set by a string of 10 characters that define the permissions to read (r), write (w) and execute (x) a file or directory for the owner, the group and all the other users of the system.
 
 ![](https://github.com/TriLab-bioinf/WORKSHOP2024_1/blob/main/figures/Permissions_figure.png)
