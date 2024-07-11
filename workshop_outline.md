@@ -107,7 +107,7 @@ Starting from the left, the columns display the following information:
 2. Number of folders inside a given directory
 3. Owner of the file/directory
 4. Group of the owner of the file/directory
-5. File/directory size in bites
+5. File/directory size in bytes
 6. Month of file/directory creation/modification
 7. Day number of file/directory creation/modification
 8. Year of file/directory creation/modification
