@@ -16,7 +16,7 @@ A Terminal is a program that opens a window and lets you interact with the shell
 
 *Linux directory structure*
 
-Linux directories are organized as a tree, where the root of the tree is named "/". Most branches of the tree require special permissions for you to be able to read their contents, to modify/create/delete a file or to execute a script or command stored in them. By default, you are assigned a working directory named "/home/$USER", where $USER represents your NIH user name. Within your home directory, you have all the permissions required to create, modify or execute any file or program that is stored in it. 
+Linux directories are organized as a tree, where the root of the tree is named "/". Most branches of the tree require special permissions for you to be able to read their contents, to modify/create/delete a file or to execute a script or command stored in them. By default, you are assigned a home directory named "/home/$USER", where $USER represents your NIH user name. Within your home directory, you have all the permissions required to create, modify or execute any file or program that is stored in it. Your Biowulf home directory doesn'y have a lot of space and it can mostly be used to kepp you configuration files. Your Biowulf accounts also includes a working directory under /data/#USER/ that is much larger and it can be expanded, if needed, by sending a ticket to IT.
 
 
 ![](https://linuxhandbook.com/content/images/2020/06/linux-directory-structure.png)
