@@ -199,7 +199,7 @@ This is my first file
 Hello World!
 Bye
 ```
-Save the file by typing ctrl-o and exit the file woth ctrl-x
+Save the file by typing ctrl-x and then "Y" to exit.
 
 ## e. Visualize the content of text files with "more", "less", "cat", "head" or "tail" and find out the number of lines, words and characters they contain with "wc" (word count).
 ```
