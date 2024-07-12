@@ -185,6 +185,8 @@ cd ./folder_1
 ```
 Note the "./folder_1" notation used above meaning "current_directory -> folder_1"
 
+**TIP:** You can see all the commands that you have run in the recent past with the linux command "history".
+
 ## d. How to create a text file with the "nano" editor
 Go to the ~/folder_1 directory and run the following command:
 ```
